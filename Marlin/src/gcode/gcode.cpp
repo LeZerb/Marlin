@@ -564,8 +564,8 @@ void GcodeSuite::process_parsed_command(
         case 302: M302(); break;                                  // M302: Allow cold extrudes (set the minimum extrude temperature)
       #endif
 
-      #if HAS_PID_HEATING
-        case 303: M303(); break;                                  // M303: PID autotune
+      #if HAS_PID_HEATING && DISABLED(DISABLE_M303)
+        case 303: M303(); break;                                    // M303: PID autotune
       #endif
 
       #if ENABLED(MORGAN_SCARA)
