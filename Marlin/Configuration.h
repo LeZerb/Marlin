@@ -1650,7 +1650,7 @@
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
 // Note: uncomment DISABLE_TONE to completely disable tone support
-         even if speaker or buzzer is available
+//       even if speaker or buzzer is available
 #define DISABLE_TONE
 #define SPEAKER
 
