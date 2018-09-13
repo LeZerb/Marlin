@@ -23,11 +23,11 @@
 
 #include "../inc/MarlinConfig.h"
 
-#if ENABLED(LCD_USE_I2C_BUZZER)
+#if ENABLED(LCD_USE_I2C_BUZZER) && HAS_BUZZER
 
   #define BUZZ(d,f) ui.buzz(d,f)
 
-#elif PIN_EXISTS(BEEPER)
+#elif PIN_EXISTS(BEEPER) && HAS_BUZZER
 
   #include "circularqueue.h"
 

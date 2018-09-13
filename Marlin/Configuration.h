@@ -1657,9 +1657,9 @@
 //
 #define SPEAKER
 
-// Note: uncomment DISABLE_TONE to completely disable tone support
+// Note: uncommene DISABLE_TONES to completely disable buzzer support
 //       even if speaker or buzzer is available
-#define DISABLE_TONE
+#define DISABLE_TONES
 
 //
 // The duration and frequency for the UI feedback sound.

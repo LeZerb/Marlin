@@ -22,7 +22,7 @@
 
 #include "../inc/MarlinConfig.h"
 
-#if DISABLED(DISABLE_TONE) && DISABLED(LCD_USE_I2C_BUZZER) && PIN_EXISTS(BEEPER)
+#if HAS_BUZZER && DISABLED(LCD_USE_I2C_BUZZER) && PIN_EXISTS(BEEPER)
 
 #include "buzzer.h"
 #include "../module/temperature.h"
