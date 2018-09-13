@@ -1346,8 +1346,15 @@
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //
 //#define EEPROM_SETTINGS // Enable for M500 and M501 commands
+//#define DISABLE_M303    // Disable PID autotune to save some PROGMEM
 //#define DISABLE_M503    // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT   // Give feedback on EEPROM commands. Disable to save PROGMEM.
+
+#ifdef DISABLE_M303
+  #ifdef PID_AUTOTUNE_MENU
+    #undef PID_AUTOTUNE_MENU
+  #endif
+#endif
 
 //
 // Host Keepalive
@@ -1583,6 +1590,14 @@
  */
 //#define NO_LCD_MENUS
 //#define SLIM_LCD_MENUS
+
+#if ENABLED(SLIM_LCD_MENUS)
+  #define DISABLE_LCD_MENU_ADVANCED_TEMPERATURE
+  #define DISABLE_LCD_MENU_ADVANCED_ACCELERATION
+#else
+  //#define DISABLE_LCD_MENU_ADVANCED_TEMPERATURE
+  //#define DISABLE_LCD_MENU_ADVANCED_ACCELERATION
+#endif
 
 //
 // ENCODER SETTINGS

@@ -1657,7 +1657,7 @@
 //
 #define SPEAKER
 
-// Note: uncommene DISABLE_TONES to completely disable buzzer support
+// Note: uncomment DISABLE_TONES to completely disable tone support
 //       even if speaker or buzzer is available
 #define DISABLE_TONES
 
