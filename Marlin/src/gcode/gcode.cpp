@@ -670,7 +670,7 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
         case 302: M302(); break;                                  // M302: Allow cold extrudes (set the minimum extrude temperature)
       #endif
 
-      #if HAS_PID_HEATING
+      #if DISABLED(DISABLE_M303) && HAS_PID_HEATING
         case 303: M303(); break;                                  // M303: PID autotune
       #endif
 

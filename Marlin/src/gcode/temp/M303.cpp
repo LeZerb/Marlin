@@ -22,7 +22,7 @@
 
 #include "../../inc/MarlinConfig.h"
 
-#if HAS_PID_HEATING
+#if DISABLED(DISABLE_M303) && HAS_PID_HEATING
 
 #include "../gcode.h"
 #include "../../lcd/ultralcd.h"

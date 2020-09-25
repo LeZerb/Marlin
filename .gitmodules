@@ -1,0 +1,4 @@
+[submodule "Marlin/configurations"]
+	path = Marlin/configurations
+	url = https://github.com/marlinfirmware/configurations
+	branch = release-2.0.6.1

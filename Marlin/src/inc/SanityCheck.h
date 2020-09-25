@@ -1134,6 +1134,13 @@ static_assert(Y_MAX_LENGTH >= Y_BED_SIZE, "Movement bounds (Y_MIN_POS, Y_MAX_POS
 #endif
 
 /**
+ * PID settings - DISABLE_M303 vs PID_AUTOTUNE_MENU
+ */
+#if BOTH(DISABLE_M303, PID_AUTOTUNE_MENU)
+  #error "To use PID autotune menu (PID_AUTOTUNE_MENU) DISABLE_M303 must not be set."
+#endif
+
+/**
  * Bed Heating Options - PID vs Limit Switching
  */
 #if BOTH(PIDTEMPBED, BED_LIMIT_SWITCHING)

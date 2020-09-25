@@ -696,7 +696,9 @@ private:
 
   TERN_(PREVENT_COLD_EXTRUSION, static void M302());
 
-  TERN_(HAS_PID_HEATING, static void M303());
+  #if DISABLED(DISABLE_M303)
+    TERN_(HAS_PID_HEATING, static void M303());
+  #endif
 
   TERN_(PIDTEMPBED, static void M304());
 
